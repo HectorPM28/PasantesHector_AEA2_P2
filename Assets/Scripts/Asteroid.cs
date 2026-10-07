@@ -58,7 +58,7 @@ public class Asteroid : MonoBehaviour
         // Sumem els punt al Player
         // Cridem al GameManger i el seu mètode per sumar scoreValue
         // Retornem l'asteroid a la seva pool
-        if (currentHealth < 0)
+        if (currentHealth <= 0)
         {
             GameManager.Instance.AddScore(data.score);
             AsteroidPool.Instance.ReturnAsteroid(this);

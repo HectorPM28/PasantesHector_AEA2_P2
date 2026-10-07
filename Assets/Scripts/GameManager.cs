@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
         //       Extra: si el joc ja ha terminat no facis res
         lives -= amount;
 
-        if (lives < 0)
+        if (lives <= 0)
         {
             GameOver();
         }

@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour, InputSystem_Actions.ISpaceShipAct
             return;
         }
         // TODO: aimScreenPosition = context;
-        aimScreenPosition = new Vector2 (1f, 1f);
+        aimScreenPosition = context.ReadValue<Vector2>();
         Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(aimScreenPosition);
         Vector2 direction = mouseWorldPosition - transform.position;
         transform.up = direction;

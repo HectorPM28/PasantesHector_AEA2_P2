@@ -21,7 +21,6 @@ public class AsteroidPool : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -72,5 +71,5 @@ public class AsteroidPool : MonoBehaviour
         //   Desactiva l'asteroid i torna'l al stack Push().
         asteroid.gameObject.SetActive(false);
         pool.Push(asteroid);
-    }
+    }   
 }

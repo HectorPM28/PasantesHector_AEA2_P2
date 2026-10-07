@@ -48,10 +48,10 @@ public class Bullet : MonoBehaviour
 
         if (other.CompareTag("Asteroid"))
         {
-            Asteroid asteroid = GetComponent<Asteroid>();
+            Asteroid asteroid = other.GetComponent<Asteroid>();
             if (asteroid != null)
             {
-				asteroid.TakeDamage(damage);
+                asteroid.TakeDamage(damage);
                 BulletPool.Instance.ReturnBullet(this);
 			}
         }
