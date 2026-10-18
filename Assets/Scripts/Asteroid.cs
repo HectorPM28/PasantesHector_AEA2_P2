@@ -7,7 +7,7 @@ public class Asteroid : MonoBehaviour
 {
     // Una mica més gran que la distancia d'aparició
     [SerializeField] private float despawnDistance = 15f;
-
+    [SerializeField] private ParticleSystem asteroidParticles;
     private AsteroidData data;
     private int currentHealth;
 
@@ -60,7 +60,9 @@ public class Asteroid : MonoBehaviour
         // Retornem l'asteroid a la seva pool
         if (currentHealth <= 0)
         {
+            AudioManager.Instance.PlaySound(2);
             GameManager.Instance.AddScore(data.score);
+            Instantiate(asteroidParticles, transform.position, Quaternion.identity);
             AsteroidPool.Instance.ReturnAsteroid(this);
         }
     }

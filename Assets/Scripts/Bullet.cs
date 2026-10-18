@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour
         // TODO: fem que la bullet es mogui cap al seu Forward.
         // "Forward" per un 2D sprite pointing up is transform.up // rb.linearVelocity = ...
         rb.linearVelocity = transform.up * speed;
-
+        AudioManager.Instance.PlaySound(1);
     }
 
     private void Update()
@@ -55,6 +55,5 @@ public class Bullet : MonoBehaviour
                 BulletPool.Instance.ReturnBullet(this);
 			}
         }
-
     }
 }

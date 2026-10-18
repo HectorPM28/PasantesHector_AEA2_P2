@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb932e916074458459c82426ef052943, type: 3}
   m_Name: BigAsteroid
   m_EditorClassIdentifier: Assembly-CSharp::AsteroidData
-  scale: {x: 1.6, y: 1.6, z: 1.6}
+  scale: {x: 1.1, y: 1.1, z: 1.1}
   minSpeed: 1
   maxSpeed: 1.5
   hp: 4

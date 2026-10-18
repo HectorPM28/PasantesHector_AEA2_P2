@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            //DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -76,6 +75,7 @@ public class GameManager : MonoBehaviour
         //     IsGameOver = true
         //     Fes aparèixer el panell de GameOver
         //     Congela el joc Time.timeScale = 0
+        AudioManager.Instance.PlaySound(3);
         IsGameOver = true;
         gameOverPanel.SetActive(true);
         Time.timeScale = 0;

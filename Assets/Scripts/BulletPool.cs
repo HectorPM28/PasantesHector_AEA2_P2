@@ -58,11 +58,10 @@ public class BulletPool : MonoBehaviour
         }
         else
         {
-			bulletToUse = CreateBullet();
+            bulletToUse = CreateBullet();
         }
 
-		bulletToUse.transform.position = position;
-		bulletToUse.transform.rotation = rotation;
+		bulletToUse.transform.SetPositionAndRotation(position, rotation);
 		bulletToUse.gameObject.SetActive(true);
         bulletToUse.Init();
         return bulletToUse;
